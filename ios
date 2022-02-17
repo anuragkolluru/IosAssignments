@@ -1,0 +1,313 @@
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var viewLoad: UILabel!
+    
+    var no1 = ""
+    var no2 = ""
+    var op = ""
+    var opr = ""
+    var cno = ""
+    var opdiff = false
+    var incmode = false
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+    @IBAction func AC(_ sender: UIButton) {
+        clearAll()
+    }
+    func clearAll(){
+        no1 = ""
+        no2 = ""
+        opdiff = false
+        opr = ""
+        cno = ""
+        viewLoad.text = ""
+        incmode = false
+    }
+    func setData(_ number: String){
+        if viewLoad.text == "0"{
+            viewLoad.text = ""
+        }
+        else{
+            if !opdiff{
+                viewLoad.text! += number
+                no1 += number
+            }
+            else{
+                if !incmode{
+                    viewLoad.text! += number
+                    no2 += number
+                }
+                else{
+                    viewLoad.text = ""
+                    viewLoad.text! += number
+                    no2 += number
+                }
+            }
+        }
+    }
+    
+    func calTemp(_ operation:String)->String {
+        if no1 != "" && no2 != ""{
+            if operation == "+"{
+                no1 = String(Double(no1)! + Double(no2)!)
+                cno = no2
+                no2 = ""
+                return String(no1)
+            }
+            if operation == "-"{
+                no1 = String(Double(no1)! - Double(no2)!)
+                cno = no2
+                no2 = ""
+                
+                return String(no1)
+            }
+            if operation == "*"{
+                no1 = String(Double(no1)! * Double(no2)!)
+                cno = no2
+                no2 = ""
+                return String(no1)
+            }
+            if operation == "/"{
+                no1 = String(Double(no1)! / Double(no2)!)
+                cno = no2
+                no2 = ""
+                return String(no1)
+            }
+            if operation == "%" {
+                let r1 = Double(no1)!
+                let r2 = Double(no2)!
+                var r = r1.remainder(dividingBy: r2)
+                no1 = String(r)
+                cno = no2
+                no2 = ""
+                return String(no1)
+            }
+        }
+        return ""
+    }
+    func resultFormatter(_ result:String)->String {
+        let value = Double(result)!
+        var resultStr = String(round(value * 100000) / 100000.0)
+        
+        if resultStr.contains(".0"){
+            resultStr.removeSubrange(resultStr.index(resultStr.endIndex, offsetBy: -2)..<resultStr.endIndex)
+        }
+        
+        return resultStr
+}
+    
+    @IBAction func C(_ sender: UIButton) {
+        no2 = ""
+        viewLoad.text = ""
+    }
+    @IBAction func AddorSub(_ sender: UIButton) {
+        if no1 == ""{
+            viewLoad.text = "-" + viewLoad.text!
+            no1 = "\(viewLoad.text!)"
+        }
+        else{
+            viewLoad.text = "-" + viewLoad.text!
+            no2 = "\(viewLoad.text!)"
+        }
+    }
+    @IBAction func Div(_ sender: UIButton) {
+        let temp = calTemp(opr)
+        opr = "/"
+        viewLoad.text = (temp != "") ? resultFormatter(temp) : ""
+          if temp != "" {
+              //            inChainmode = true
+              if no2 != ""{
+                  incmode = true
+                  
+                  if opdiff {
+                      op = String(Double(temp)! / Double(no2)!)
+                      print(op)
+                      if op == "inf"{
+                        viewLoad.text! = "Error"
+                      }else{
+                        viewLoad.text! = resultFormatter(op)
+                      }
+                  }
+              }
+          }
+          opdiff = true
+        
+    }
+    
+    @IBAction func Multiply(_ sender: UIButton) {
+        let temp = calTemp(opr)
+        print("temp is \(temp)")
+        opr = "*"
+        cno=""
+        viewLoad.text = (temp != "") ? resultFormatter(temp) : ""
+         
+        opdiff = true
+    }
+    @IBAction func Subtract(_ sender: UIButton) {
+        let temp = calTemp(opr)
+        opr = "-"
+       viewLoad.text = (temp != "") ? resultFormatter(temp) : ""
+        if temp != "" {
+            if no2 != ""{
+                incmode = true
+                cno = no2;
+                if opdiff {
+                    op = String(Double(temp)! - Double(no2)!)
+                   viewLoad.text! = resultFormatter(op)
+                }
+            }
+        }
+        opdiff = true
+    }
+    @IBAction func Add(_ sender: UIButton) {
+        let temp = calTemp(opr)
+        print("temp is \(temp)")
+        opr = "+"
+        cno=""
+        viewLoad.text = (temp != "") ? resultFormatter(temp) : ""
+        opdiff = true
+    }
+    
+    @IBAction func Equal(_ sender: UIButton) {
+        var res = ""
+        switch opr {
+        case "+":
+            
+            if cno != "" {
+                res = String(Double(no1)! + Double(cno)!)
+                viewLoad.text = resultFormatter(res)
+                 no2 = cno
+            }else{
+                res = String(Double(no1)! + Double(no2)!)
+                viewLoad.text = resultFormatter(res)
+            }
+            no1 = res
+            
+            break
+        case "*":
+            if cno != "" {
+                res = String(Double(no1)! * Double(cno)!)
+                viewLoad.text = resultFormatter(res)
+            }else{
+                res = String(Double(no1)! * Double(no2)!)
+                viewLoad.text = resultFormatter(res)
+            }
+            no1 = res
+            
+            break
+        case "-":
+            if cno != "" {
+                res = String(Double(no1)! - Double(cno)!)
+                viewLoad.text = resultFormatter(res)
+                
+            }else{
+                res = String(Double(no1)! - Double(no2)!)
+                viewLoad.text = resultFormatter(res)
+               
+            }
+            no1 = res
+            break
+        case "/":
+            if viewLoad.text == "Error"{
+                clearAll()
+            }else{
+                if cno != "" {
+                    res = String(Double(no1)! / Double(cno)!)
+                    if res == "inf"{
+                        viewLoad.text! = "Error"
+                        return
+                    }else{
+                        viewLoad.text = resultFormatter(res)
+                    }
+                }else{
+                    res = String(Double(no1)! / Double(no2)!)
+                    if res == "inf"{
+                        viewLoad.text! = "Error"
+                        return
+                    }else{
+                        viewLoad.text = resultFormatter(res)
+                    }
+                }
+                no1 = res
+            }
+            break
+        case "%":
+            if cno != "" {
+                viewLoad.text = resultFormatter(res)
+                let a1 = Double(no1)!
+                let a2 = Double(cno)!
+                var s = a1.remainder(dividingBy: a2)
+                res = String(s)
+                 no2 = cno
+            }else{
+                let s1 = Double(no1)!
+                let s2 = Double(no2)!
+                var a = s1.remainder(dividingBy: s2)
+                res = String(a)
+                viewLoad.text = resultFormatter(res)
+            }
+            no1 = res
+            
+            break
+            
+        default:
+            print("IOS")
+        }
+    
+    }
+    
+    @IBAction func remainder(_ sender: UIButton) {
+        let temp = calTemp(opr)
+        print("temp is \(temp)")
+        opr = "%"
+        cno=""
+        viewLoad.text = (temp != "") ? resultFormatter(temp) : ""
+         
+        opdiff = true
+    }
+    @IBAction func dot(_ sender: UIButton) {
+        setData(".")
+    }
+    
+    @IBAction func seven(_ sender: UIButton) {
+        setData("7")
+    }
+    @IBAction func eight(_ sender: UIButton) {
+        setData("8")
+    }
+    
+    @IBAction func nine(_ sender: UIButton) {
+        setData("9")
+    }
+    @IBAction func four(_ sender: UIButton) {
+        setData("4")
+    }
+    
+    @IBAction func five(_ sender: UIButton) {
+        setData("5")
+    }
+    @IBAction func six(_ sender: UIButton) {
+        setData("6")
+    }
+    
+    @IBAction func one(_ sender: UIButton) {
+        setData("1")
+    }
+    @IBAction func two(_ sender: UIButton) {
+        setData("2")
+    }
+    @IBAction func three(_ sender: UIButton) {
+        setData("3")
+    }
+    @IBAction func zero(_ sender: UIButton) {
+        setData("0")
+    }
+    
+    
+}
