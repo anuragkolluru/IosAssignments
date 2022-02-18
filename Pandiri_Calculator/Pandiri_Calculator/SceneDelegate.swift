@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//   Kolluru_Calculator
+//  Pandiri_Calculator
 //
-//  Created by Kolluru,Anurag on 2/13/22.
+//  Created by Pandiri,Govinda R on 2/13/22.
 //
 
 import UIKit

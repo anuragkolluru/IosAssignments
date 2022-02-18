@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kolluru_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kanaparthi_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,12 +30,12 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="AC" titleAlignment="center">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemBrownColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="allC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iVm-dY-JlT"/>
+                                                    <action selector="ACL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QDw-ld-Cmf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jL6-Ah-Dzo">
@@ -48,10 +48,10 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="C" titleAlignment="center">
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemBrownColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MPO-Mv-In0"/>
+                                                    <action selector="clr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JEZ-Hg-YG0"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmW-gG-8d4">
@@ -73,7 +73,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="addOrSub:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6KK-hP-pEY"/>
+                                                    <action selector="plusOrMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wmj-Qg-JZ5"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwb-ci-zly">
@@ -95,7 +95,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="division:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PCj-uz-Low"/>
+                                                    <action selector="divd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GPU-vA-4Jz"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -112,13 +112,14 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="7" titleAlignment="center">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonSeven:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Slm-UR-7be"/>
+                                                    <action selector="button07:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EVM-mO-lMq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpV-YK-Qnm">
@@ -130,13 +131,14 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="8" titleAlignment="center">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                        <color key="strokeColor" systemColor="systemBackgroundColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonEight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UNG-uJ-75S"/>
+                                                    <action selector="button08:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jk4-wd-peH"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9a-38-uw2">
@@ -148,13 +150,13 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="9" titleAlignment="center">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonNine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B2c-8q-hFF"/>
+                                                    <action selector="button09:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h0D-YE-QsL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obj-le-NLN">
@@ -176,7 +178,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="multiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cqk-GO-oYm"/>
+                                                    <action selector="multy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ls2-bO-FG8"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -193,13 +195,13 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="4" titleAlignment="center">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonFour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVE-rd-Beg"/>
+                                                    <action selector="button04:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SMo-ad-fqK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGl-5m-gQ2">
@@ -211,13 +213,13 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="5" titleAlignment="center">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rsR-Ln-fnF"/>
+                                                    <action selector="button05:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a7S-Os-2gW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49d-MM-TGe">
@@ -229,13 +231,13 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="6" titleAlignment="center">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonSix:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zo4-XY-jGL"/>
+                                                    <action selector="button06:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F5I-En-lnC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9N-cZ-9Lq">
@@ -257,7 +259,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="substraction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKI-kj-T40"/>
+                                                    <action selector="sub:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hs7-nF-bir"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -274,13 +276,13 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="1" titleAlignment="center">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EWi-lh-Kxx"/>
+                                                    <action selector="button01:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BPL-D8-aYG"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99Y-oh-peT">
@@ -292,13 +294,13 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="2" titleAlignment="center">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TCf-X0-UoZ"/>
+                                                    <action selector="button02:" destination="BYZ-38-t0r" eventType="touchUpInside" id="onf-Mm-jB9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMG-iz-cAC">
@@ -310,13 +312,13 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="3" titleAlignment="center">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chG-k8-oPL"/>
+                                                    <action selector="button03:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G1V-Nm-pRR"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQO-Np-kDJ">
@@ -338,7 +340,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="addition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FMf-R5-NXY"/>
+                                                    <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CSt-ZM-Xn7"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -355,13 +357,13 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="0" titleAlignment="center">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonZero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pph-Vx-1km"/>
+                                                    <action selector="button0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="be9-eN-tG4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J70-Uw-NJH">
@@ -373,13 +375,13 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="." titleAlignment="center">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="dot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XEN-o9-V8u"/>
+                                                    <action selector="dot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tlo-ye-rRX"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAR-Op-3MJ">
@@ -401,7 +403,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="remainder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uc8-hv-xdE"/>
+                                                    <action selector="rmdr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KxP-QS-Ka7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raI-fB-aK3">
@@ -423,7 +425,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="equals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CyY-1N-2Gz"/>
+                                                    <action selector="eqls:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rj0-h4-Vjg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -431,7 +433,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYn-Bd-B2v">
-                                <rect key="frame" x="27" y="127" width="360" height="50"/>
+                                <rect key="frame" x="27" y="137" width="360" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -446,7 +448,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="displayLable" destination="gYn-Bd-B2v" id="hKc-5Z-tNk"/>
+                        <outlet property="displayLbl" destination="gYn-Bd-B2v" id="E64-vo-y0z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -458,20 +460,23 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
